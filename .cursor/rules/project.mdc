@@ -1,0 +1,34 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# bobby.me
+
+这是一个我的个人网站，我将使用Nuxt以及相关的工具去构建一个现代化的个人网站。
+
+Web框架：使用Nuxt3+TypeScript的技术构建，支持SSR
+UI： 使用UnoCSS，请使用最新的UnoCSS来构建UI
+CMS：使用`Nuxt Content` 作为CMS，并且渲染Markdown文件
+
+
+## 核心功能
+- 首页
+  - 个人介绍
+  - 社交媒体链接
+  - 基本布局：Navbar+Footer
+- 博客页
+  - 博客列表
+  - 博客详情
+- 项目页
+  - 项目列表
+- 周报页
+  - 时间线展示
+  - 周报详情页
+- 简历页
+  - 在线简历渲染，支持中文/英文切换
+
+## 其他功能
+- 支持RSS订阅
+- 支持深色模式切换
+- 支持多语言：中文+英文
