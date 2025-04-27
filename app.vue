@@ -7,3 +7,9 @@ import '@unocss/reset/tailwind.css'
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+<style>
+* {
+  font-family: 'Inter', sans-serif;
+}
+</style>

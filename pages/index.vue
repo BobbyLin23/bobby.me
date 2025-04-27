@@ -1,9 +1,5 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
-  <div class="text-red-500 p-2 bg-dark">
-    index
+  <div>
+    <h1>Hello World</h1>
   </div>
 </template>
