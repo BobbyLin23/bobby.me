@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import type { BlogCollectionItem } from '@nuxt/content'
+import type { WeeklyCollectionItem } from '@nuxt/content'
 
-const { data: posts } = await useAsyncData('blog', () => queryCollection('blog').all())
+const { data: weekly } = await useAsyncData('weekly', () => queryCollection('weekly').all())
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isFuture = (a?: Date | string | number) => a && new Date(a) > new Date()
 const isSameYear = (a?: Date | string | number, b?: Date | string | number) => a && b && getYear(a) === getYear(b)
-function isSameGroup(a: BlogCollectionItem, b?: BlogCollectionItem) {
+function isSameGroup(a: WeeklyCollectionItem, b?: WeeklyCollectionItem) {
   return (isFuture(a.date) === isFuture(b?.date)) && isSameYear(a.date, b?.date)
 }
 
-function getGroupName(p: BlogCollectionItem) {
+function getGroupName(p: WeeklyCollectionItem) {
   if (isFuture(p.date))
     return 'Upcoming'
   return getYear(p.date)
@@ -19,15 +19,15 @@ function getGroupName(p: BlogCollectionItem) {
 
 <template>
   <ul>
-    <template v-if="!posts?.length">
+    <template v-if="!weekly?.length">
       <div py2 op50>
         { nothing here yet }
       </div>
     </template>
 
-    <template v-for="route, idx in posts" :key="route.path">
+    <template v-for="route, idx in weekly" :key="route.path">
       <div
-        v-if="!isSameGroup(route, posts?.[idx - 1])"
+        v-if="!isSameGroup(route, weekly?.[idx - 1])"
         slide-enter h20 pointer-events-none select-none relative
         :style="{
           '--enter-stage': idx - 2,
@@ -63,20 +63,8 @@ function getGroupName(p: BlogCollectionItem) {
                 align-middle flex-none
                 class="text-zinc5 text-xs my-auto ml--12 mr2 px-1 py-0.5 rounded bg-zinc:15 hidden md:block"
               >中文</span>
-              <span
-                v-if="route.lang === 'ja'"
-                align-middle flex-none
-                class="text-zinc5 text-xs my-auto ml--15 mr2 px-1 py-0.5 rounded bg-zinc:15 hidden md:block"
-              >日本語</span>
               <span align-middle>{{ route.title }}</span>
-              <span
-                v-if="route.redirect"
-
-                i-carbon-arrow-up-right text-xs ml--1.5 align-middle op50 flex-none
-                title="External"
-              />
             </div>
-
             <div flex="~ gap-2 items-center">
               <span text-sm op50 ws-nowrap>
                 {{ formatDate(route.date, true) }}

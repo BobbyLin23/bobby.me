@@ -19,5 +19,18 @@ export default defineContentConfig({
         duration: z.string().optional(),
       }),
     }),
+    weekly: defineCollection({
+      source: 'weekly/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+        date: z.date(),
+        desc: z.string(),
+        lang: z.string(),
+        week: z.string(),
+        year: z.string(),
+        duration: z.string().optional(),
+      }),
+    }),
   },
 })
