@@ -4,19 +4,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@unocss/nuxt',
-    '@nuxt/fonts',
-    '@nuxt/icon',
     '@vueuse/nuxt',
     '@nuxt/content',
     'dayjs-nuxt',
   ],
   devServer: {
     port: 3019,
-  },
-  icon: {
-    serverBundle: {
-      collections: ['mdi'],
-    },
   },
   css: ['~/assets/css/main.css', '~/assets/css/prose.css', '~/assets/css/markdown.css'],
   components: [

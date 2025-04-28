@@ -40,7 +40,7 @@ const { y: scroll } = useWindowScroll()
         <NuxtLink to="/weekly" title="Weekly">
           <div i-ri-calendar-line />
         </NuxtLink>
-        <a href="https://bsky.app/profile/antfu.me" target="_blank" title="Twitter" class="lt-md:hidden">
+        <a href="https://x.com/BobbyLin23" target="_blank" title="Twitter" class="lt-md:hidden">
           <div i-ri-twitter-line />
         </a>
         <a href="https://github.com/BobbyLin23" target="_blank" title="GitHub" class="lt-md:hidden">
