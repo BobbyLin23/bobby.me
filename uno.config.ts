@@ -10,8 +10,10 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'Inter:400,500,600,700',
-        mono: 'DM Mono:400,500,600',
+        sans: 'Inter',
+        mono: 'DM Mono',
+        condensed: 'Roboto Condensed',
+        wisper: 'Bad Script',
       },
     }),
   ],

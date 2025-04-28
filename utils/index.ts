@@ -1,0 +1,9 @@
+import { useDayjs } from '#dayjs'
+
+export function formatDate(d: string | Date, onlyDate = true) {
+  const dayjs = useDayjs()
+  const date = dayjs(d)
+  if (onlyDate || date.year() === dayjs().year())
+    return date.format('MMM D')
+  return date.format('MMM D, YYYY')
+}

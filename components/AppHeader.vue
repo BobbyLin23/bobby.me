@@ -12,7 +12,7 @@ const { y: scroll } = useWindowScroll()
 <template>
   <header class="header z-40">
     <NuxtLink
-      class="absolute m-5 h-12 w-12 select-none outline-none xl:fixed"
+      class="outline-none m-5 h-12 w-12 select-none absolute xl:fixed"
       to="/"
       focusable="false"
     >
@@ -20,7 +20,7 @@ const { y: scroll } = useWindowScroll()
     </NuxtLink>
     <button
       title="Scroll to top"
-      fixed bottom-3 right-3 z-100 h-10 w-10 rounded-full transition duration-300 print:hidden hover-bg-hex-8883 hover:op100
+      rounded-full h-10 w-10 transition duration-300 bottom-3 right-3 fixed z-100 hover-bg-hex-8883 hover:op100 print:hidden
       :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
       @click="toTop()"
     >
@@ -37,13 +37,13 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </NuxtLink>
-        <NuxtLink to="/demos" title="Demos">
-          <div i-ri-screenshot-line />
+        <NuxtLink to="/weekly" title="Weekly">
+          <div i-ri-calendar-line />
         </NuxtLink>
-        <a href="https://bsky.app/profile/antfu.me" target="_blank" title="Bluesky" class="lt-md:hidden">
-          <div i-ri-bluesky-line />
+        <a href="https://bsky.app/profile/antfu.me" target="_blank" title="Twitter" class="lt-md:hidden">
+          <div i-ri-twitter-line />
         </a>
-        <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
+        <a href="https://github.com/BobbyLin23" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">

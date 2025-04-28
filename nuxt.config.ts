@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     '@vueuse/nuxt',
+    '@nuxt/content',
+    'dayjs-nuxt',
   ],
   devServer: {
     port: 3019,
@@ -16,4 +18,12 @@ export default defineNuxtConfig({
       collections: ['mdi'],
     },
   },
+  css: ['~/assets/css/main.css', '~/assets/css/prose.css', '~/assets/css/markdown.css'],
+  components: [
+    '~/components',
+    {
+      path: '~/components/content',
+      pathPrefix: false,
+    },
+  ],
 })
