@@ -69,6 +69,10 @@ html:not(.dark) .shiki span {
   color: var(--fg);
 }
 
+.prose p {
+  color: var(--fg);
+}
+
 .prose a {
   font-weight: inherit;
   text-decoration: none;

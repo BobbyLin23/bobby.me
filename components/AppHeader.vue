@@ -12,7 +12,7 @@ const { y: scroll } = useWindowScroll()
 <template>
   <header class="header z-40">
     <NuxtLink
-      class="outline-none m-5 h-12 w-12 select-none absolute xl:fixed"
+      class="outline-none m-5 h-12 w-12 select-none absolute dark:text-white xl:fixed"
       to="/"
       focusable="false"
     >
@@ -20,7 +20,7 @@ const { y: scroll } = useWindowScroll()
     </NuxtLink>
     <button
       title="Scroll to top"
-      rounded-full h-10 w-10 transition duration-300 bottom-3 right-3 fixed z-100 hover-bg-hex-8883 hover:op100 print:hidden
+      rounded-full h-10 w-10 cursor-pointer transition duration-300 bottom-3 right-3 fixed z-100 hover-bg-hex-8883 hover:op100 print:hidden
       :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
       @click="toTop()"
     >
@@ -28,7 +28,7 @@ const { y: scroll } = useWindowScroll()
     </button>
     <nav class="nav">
       <div class="spacer" />
-      <div class="right" print:op0>
+      <div class="right dark:text-neutral-400" print:op0>
         <NuxtLink to="/posts" title="Blog">
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
@@ -85,7 +85,6 @@ const { y: scroll } = useWindowScroll()
 .nav a {
   cursor: pointer;
   text-decoration: none;
-  color: inherit;
   transition: opacity 0.2s ease;
   opacity: 0.6;
   outline: none;
