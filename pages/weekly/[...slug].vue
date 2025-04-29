@@ -3,5 +3,5 @@ const route = useRoute()
 </script>
 
 <template>
-  <PostWrapper :path="route.path" />
+  <WeeklyWrapper :path="route.path" />
 </template>

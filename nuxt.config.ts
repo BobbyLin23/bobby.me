@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxt/content',
-    'dayjs-nuxt',
   ],
   devServer: {
     port: 3019,
