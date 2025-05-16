@@ -148,6 +148,12 @@ h6:focus .header-anchor {
   line-height: 1.6em;
   padding: 0.5em 1em;
   margin-left: -1.1em;
+  background-color: #fafafa;
+  border-radius: 0.5em;
+}
+
+html.dark .prose blockquote {
+  background-color: #191919;
 }
 
 .prose blockquote > * {
